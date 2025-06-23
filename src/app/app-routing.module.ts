@@ -15,7 +15,7 @@ import { UserOrdersComponent } from './pages/user-orders/user-orders.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
-  { path: 'product/:id', component: ProductDetailComponent },
+  { path: 'product-detail', component: ProductDetailComponent },
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'order-success', component: OrderSuccessComponent },
