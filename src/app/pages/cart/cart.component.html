@@ -1,33 +1,20 @@
 <body class="bg-pink-50 min-h-screen flex flex-col">
-    <!-- Header -->
-
-    <!-- Main Content -->
     <main class="flex-grow container mx-auto px-4 py-8">
         <h2 class="text-4xl font-bold text-pink-600 mb-8 text-center select-none">
             Giỏ Hàng Của Bạn
         </h2>
-        <div class="overflow-x-auto shadow-lg rounded-lg">
+
+        <!-- Desktop table -->
+        <div class="overflow-x-auto shadow-lg rounded-lg hidden md:block">
             <table class="min-w-full bg-white rounded-lg">
                 <thead class="bg-pink-200 text-pink-800 font-semibold text-left">
                     <tr>
-                        <th class="py-3 px-4 w-32">
-                            Sản Phẩm
-                        </th>
-                        <th class="py-3 px-4">
-                            Tên Bánh
-                        </th>
-                        <th class="py-3 px-4 w-32 text-center">
-                            Số Lượng
-                        </th>
-                        <th class="py-3 px-4 w-40 text-right">
-                            Đơn Giá
-                        </th>
-                        <th class="py-3 px-4 w-40 text-right">
-                            Thành Tiền
-                        </th>
-                        <th class="py-3 px-4 w-24 text-center">
-                            Xóa
-                        </th>
+                        <th class="py-3 px-4 w-32">Sản Phẩm</th>
+                        <th class="py-3 px-4">Tên Bánh</th>
+                        <th class="py-3 px-4 w-32 text-center">Số Lượng</th>
+                        <th class="py-3 px-4 w-40 text-right">Đơn Giá</th>
+                        <th class="py-3 px-4 w-40 text-right">Thành Tiền</th>
+                        <th class="py-3 px-4 w-24 text-center">Xóa</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-pink-100">
@@ -239,45 +226,101 @@
                 </tbody>
             </table>
         </div>
+        <!-- Mobile responsive version -->
+        <div class="md:hidden flex flex-col gap-4">
+            <!-- Repeat block below for each product -->
+            <div class="bg-white rounded-lg p-4 shadow-md">
+                <div class="flex items-center gap-4">
+                    <img src="https://scr.vn/wp-content/uploads/2020/10/Chiec-banh-sinh-nhat-cuc-ky-dep-tang-cho-me-1024x1018.jpg"
+                        class="w-20 h-20 rounded-lg object-cover" alt="Banh kem">
+                    <div>
+                        <h3 class="font-bold text-pink-700">Bánh Kem Hồng 3 Tầng</h3>
+                        <p class="text-sm text-pink-500">₫450,000 / cái</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
+                        <button class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" value="2" min="1"
+                            class="w-12 text-center border-none focus:ring-0 focus:outline-none">
+                        <button class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <span class="font-bold text-pink-700">₫900,000</span>
+                    <button class="text-pink-600 hover:text-pink-800">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-md">
+                <div class="flex items-center gap-4">
+                    <img src="https://digifood.vn/blog/wp-content/uploads/2022/05/banh-kem-pho-mai-1-Anh-@beanjamvn.jpg"
+                        class="w-20 h-20 rounded-lg object-cover" alt="Banh kem">
+                    <div>
+                        <h3 class="font-bold text-pink-700">Bánh Kem Hồng 3 Tầng</h3>
+                        <p class="text-sm text-pink-500">₫450,000 / cái</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
+                        <button class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" value="2" min="1"
+                            class="w-12 text-center border-none focus:ring-0 focus:outline-none">
+                        <button class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <span class="font-bold text-pink-700">₫900,000</span>
+                    <button class="text-pink-600 hover:text-pink-800">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg p-4 shadow-md">
+                <div class="flex items-center gap-4">
+                    <img src="https://tse3.mm.bing.net/th?id=OIP.FO3eQkiDY6o1qwqE-QKuoAHaH0&pid=Api&P=0&h=180"
+                        class="w-20 h-20 rounded-lg object-cover" alt="Banh kem">
+                    <div>
+                        <h3 class="font-bold text-pink-700">Bánh Kem Hồng 3 Tầng</h3>
+                        <p class="text-sm text-pink-500">₫450,000 / cái</p>
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-4">
+                    <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
+                        <button class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <input type="number" value="2" min="1"
+                            class="w-12 text-center border-none focus:ring-0 focus:outline-none">
+                        <button class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <span class="font-bold text-pink-700">₫900,000</span>
+                    <button class="text-pink-600 hover:text-pink-800">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <div
             class="mt-8 max-w-md mx-auto bg-pink-100 rounded-lg p-6 shadow-lg text-pink-800 font-semibold text-lg select-none">
             <div class="flex justify-between mb-3">
-                <span>
-                    Tổng tiền hàng:
-                </span>
-                <span>
-                    ₫4,510,000
-                </span>
+                <span>Tổng tiền hàng:</span>
+                <span>₫4,510,000</span>
             </div>
             <div class="flex justify-between mb-3">
-                <span>
-                    Phí vận chuyển:
-                </span>
-                <span>
-                    ₫50,000
-                </span>
+                <span>Phí vận chuyển:</span>
+                <span>₫50,000</span>
             </div>
             <div class="border-t border-pink-300 pt-3 flex justify-between text-2xl font-bold">
-                <span>
-                    Tổng thanh toán:
-                </span>
-                <span>
-                    ₫4,560,000
-                </span>
+                <span>Tổng thanh toán:</span>
+                <span>₫4,560,000</span>
             </div>
         </div>
-        <div class="mt-10 flex justify-center">
-            <button aria-label="Thanh toán giỏ hàng"
-                class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-10 rounded-full shadow-lg flex items-center space-x-3 transition select-none">
-                <i class="fas fa-credit-card fa-lg">
-                </i>
-                <span>
-                    Thanh Toán Ngay
-                </span>
-            </button>
-        </div>
-    </main>
-    <!-- Footer -->
-
-
-</body>

@@ -1,47 +1,56 @@
+<!-- KHÔNG có <body> trong file component -->
 
+<!-- Header Component -->
 <header class="bg-pink-200 shadow-md sticky top-0 z-50">
-  <div class="container mx-auto flex items-center justify-between px-4 py-4">
-   <a class="text-3xl logo-font text-pink-700" routerLink="/">
-  CakeUp
-</a>
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
 
-    <nav>
-      <ul class="flex space-x-6 text-pink-800 font-semibold text-lg">
-        <li>
-          <a routerLink="/" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition">
-            Trang chủ
-          </a>
-        </li>
-        <li>
-          <a routerLink="/products" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition">
-            Bánh Ngọt
-          </a>
-        </li>
-        <li>
-          <a routerLink="/about" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition">
-            Giới thiệu
-          </a>
-        </li>
-        <li>
-          <a routerLink="/contact" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition">
-            Liên hệ
-          </a>
-        </li>
-        <li>
-          <a routerLink="/cart" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition flex items-center">
-            🛒 Giỏ hàng
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <!-- Logo -->
+      <a class="logo-font text-3xl text-pink-700 font-bold" routerLink="/">CakeUp</a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-6">
+        <a routerLink="/" routerLinkActive="text-pink-600"
+          class="text-pink-800 hover:text-pink-600 font-medium transition">Trang chủ</a>
+        <a routerLink="/products" routerLinkActive="text-pink-600"
+          class="text-pink-800 hover:text-pink-600 font-medium transition">Bánh Ngọt</a>
+        <a routerLink="/about" routerLinkActive="text-pink-600"
+          class="text-pink-800 hover:text-pink-600 font-medium transition">Giới thiệu</a>
+        <a routerLink="/contact" routerLinkActive="text-pink-600"
+          class="text-pink-800 hover:text-pink-600 font-medium transition">Liên hệ</a>
+        <a routerLink="/cart" routerLinkActive="text-pink-600"
+          class="text-pink-800 hover:text-pink-600 font-medium transition">🛒 Giỏ hàng</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button (click)="toggleMenu()" class="md:hidden text-pink-800 p-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <div #mobileMenu [class.hidden]="!isMenuOpen" class="md:hidden pb-4">
+      <div class="flex flex-col space-y-2">
+        <a routerLink="/" class="text-pink-800 hover:text-pink-600 py-2 px-2 transition">Trang chủ</a>
+        <a routerLink="/products" class="text-pink-800 hover:text-pink-600 py-2 px-2 transition">Bánh Ngọt</a>
+        <a routerLink="/about" class="text-pink-800 hover:text-pink-600 py-2 px-2 transition">Giới thiệu</a>
+        <a routerLink="/contact" class="text-pink-800 hover:text-pink-600 py-2 px-2 transition">Liên hệ</a>
+        <a routerLink="/cart" class="text-pink-800 hover:text-pink-600 py-2 px-2 transition">🛒 Giỏ hàng</a>
+      </div>
+    </div>
   </div>
 </header>
 
+<!-- Main content -->
 <router-outlet></router-outlet>
 
- <!-- Footer -->
-  <footer class="bg-pink-200 text-pink-800 py-6 mt-auto">
-   <div class="container mx-auto text-center text-sm">
-    © 2024 CakeUp. Bản quyền thuộc về CakeUp.
-   </div>
-  </footer>
+<!-- Footer -->
+<footer class="bg-pink-200 text-pink-800 py-6 mt-12">
+  <div class="max-w-7xl mx-auto text-center px-4">
+    <p class="text-sm">© 2024 CakeUp. Bản quyền thuộc về CakeUp.</p>
+  </div>
+</footer>
