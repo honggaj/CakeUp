@@ -1,0 +1,38 @@
+<header class="bg-pink-200 shadow-md sticky top-0 z-50">
+  <div class="container mx-auto flex items-center justify-between px-4 py-4">
+    <a class="text-3xl font-logo text-pink-700" routerLink="/">
+      CakeUp
+    </a>
+    <nav>
+      <ul class="flex space-x-6 text-pink-800 font-semibold text-lg">
+        <li>
+          <a routerLink="/" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition">
+            Trang chủ
+          </a>
+        </li>
+        <li>
+          <a routerLink="/products" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition">
+            Bánh Ngọt
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition">
+            Giới thiệu
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition">
+            Liên hệ
+          </a>
+        </li>
+        <li>
+          <a routerLink="/cart" routerLinkActive="text-pink-600" class="hover:text-pink-600 transition flex items-center">
+            🛒 Giỏ hàng
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<router-outlet></router-outlet>

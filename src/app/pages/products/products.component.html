@@ -1,0 +1,464 @@
+<body class="bg-pink-50 min-h-screen flex flex-col">
+    <header class="bg-pink-300 shadow-md">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <img alt="Logo bánh kem màu hồng với hình chiếc bánh kem 3 tầng" class="w-12 h-12" height="48"
+                    src="https://storage.googleapis.com/a1aa/image/3927dc2e-1aea-4994-4386-3080386aab5c.jpg"
+                    width="48" />
+                <h1 class="text-white text-2xl font-bold tracking-wide">
+                    Bánh Kem Ngọt Ngào
+                </h1>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-white font-semibold">
+                <a class="hover:text-pink-100 transition" href="#">
+                    Trang Chủ
+                </a>
+                <a class="hover:text-pink-100 transition" href="#categories">
+                    Thể Loại
+                </a>
+                <a class="hover:text-pink-100 transition" href="#products">
+                    Sản Phẩm
+                </a>
+                <a class="hover:text-pink-100 transition" href="#contact">
+                    Liên Hệ
+                </a>
+            </nav>
+            <button aria-label="Mở menu"
+                class="md:hidden text-pink-100 focus:outline-none focus:ring-2 focus:ring-pink-200" id="menu-btn">
+                <i class="fas fa-bars fa-lg">
+                </i>
+            </button>
+        </div>
+        <nav class="md:hidden bg-pink-200 text-pink-900 hidden flex-col space-y-2 px-4 pb-4" id="mobile-menu">
+            <a class="block py-2 border-b border-pink-300" href="#">
+                Trang Chủ
+            </a>
+            <a class="block py-2 border-b border-pink-300" href="#categories">
+                Thể Loại
+            </a>
+            <a class="block py-2 border-b border-pink-300" href="#products">
+                Sản Phẩm
+            </a>
+            <a class="block py-2" href="#contact">
+                Liên Hệ
+            </a>
+        </nav>
+    </header>
+    <main class="flex-grow container mx-auto px-4 py-10">
+        <section class="mb-16" id="categories">
+            <h2 class="text-3xl font-bold text-pink-700 mb-8 text-center">
+                Thể Loại Bánh Kem
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div
+                    class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-pink-700 hover:shadow-lg transition">
+                    <i class="fas fa-birthday-cake fa-4x mb-4">
+                    </i>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Bánh Sinh Nhật
+                    </h3>
+                    <p class="text-center text-pink-500">
+                        Bánh kem trang trí đẹp mắt, phù hợp cho các dịp sinh nhật.
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-pink-700 hover:shadow-lg transition">
+                    <i class="fas fa-heart fa-4x mb-4">
+                    </i>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Bánh Valentine
+                    </h3>
+                    <p class="text-center text-pink-500">
+                        Bánh kem ngọt ngào, lãng mạn dành tặng người thương.
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-pink-700 hover:shadow-lg transition">
+                    <i class="fas fa-baby fa-4x mb-4">
+                    </i>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Bánh Tiệc Bé
+                    </h3>
+                    <p class="text-center text-pink-500">
+                        Bánh kem dễ thương, phù hợp cho tiệc thôi nôi và sinh nhật bé.
+                    </p>
+                </div>
+                <div
+                    class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-pink-700 hover:shadow-lg transition">
+                    <i class="fas fa-briefcase fa-4x mb-4">
+                    </i>
+                    <h3 class="text-xl font-semibold mb-2">
+                        Bánh Sự Kiện
+                    </h3>
+                    <p class="text-center text-pink-500">
+                        Bánh kem sang trọng, thích hợp cho các sự kiện, hội nghị.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="mb-16" id="products">
+            <h2 class="text-3xl font-bold text-pink-700 mb-8 text-center">
+                Sản Phẩm Bánh Kem
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh sinh nhật 3 tầng trang trí hoa hồng màu hồng và kem bông trắng"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://tse2.mm.bing.net/th?id=OIP.WFDPb2OS4KoGK81yDZDDRwHaIs&pid=Api&P=0&h=180"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Sinh Nhật 3 Tầng
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem 3 tầng sang trọng với hoa hồng tươi và kem bông mềm mịn.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫1,200,000
+                            </span>
+                            <button aria-label="Thêm Bánh Sinh Nhật 3 Tầng vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh Valentine hình trái tim đỏ với kem trắng trang trí socola"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://birthdaylovecake.com/wp-content/uploads/2022/02/2.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Valentine Trái Tim
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem hình trái tim đỏ, trang trí socola và kem tươi thơm ngon.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫850,000
+                            </span>
+                            <button aria-label="Thêm Bánh Valentine Trái Tim vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh tiệc bé hình gấu bông màu hồng và kem trang trí ngộ nghĩnh"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://tse4.mm.bing.net/th?id=OIP.aBAGJKrqnfzzRmysPF9kxQHaHa&pid=Api&P=0&h=180"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Tiệc Bé Gấu Bông
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem ngộ nghĩnh hình gấu bông, màu hồng pastel dễ thương.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫700,000
+                            </span>
+                            <button aria-label="Thêm Bánh Tiệc Bé Gấu Bông vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh sự kiện hình tròn trang trí hoa tươi và kem màu hồng nhạt"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://banhsinhnhat.com/media/cache/c6/ea/c6ea5e384f9ed2b2284fd47d0e5d16ab.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Sự Kiện Hoa Tươi
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem sang trọng với hoa tươi và kem hồng nhạt, phù hợp sự kiện.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫1,500,000
+                            </span>
+                            <button aria-label="Thêm Bánh Sự Kiện Hoa Tươi vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh sinh nhật hình thú ngộ nghĩnh màu hồng pastel và kem trắng"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://friendshipcakes.com/wp-content/uploads/2023/04/banh-ve-hinh-7.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Sinh Nhật Hình Thú
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem hình thú ngộ nghĩnh, màu hồng pastel, thích hợp cho bé.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫900,000
+                            </span>
+                            <button aria-label="Thêm Bánh Sinh Nhật Hình Thú vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh Valentine hình hoa hồng đỏ và kem hồng đậm trang trí tinh tế"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://banhkemngonghinh.com/wp-content/uploads/2018/04/26-banh-kem-sinh-nhat-tang-ngay-8.3-trai-tim.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Valentine Hoa Hồng
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem hình hoa hồng đỏ, kem hồng đậm, ngọt ngào và lãng mạn.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫1,000,000
+                            </span>
+                            <button aria-label="Thêm Bánh Valentine Hoa Hồng vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh tiệc bé hình ngôi sao màu hồng nhạt và kem trắng trang trí dễ thương"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://friendshipcakes.com/wp-content/uploads/2023/04/banh-ve-hinh-0-e1681523771366.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Tiệc Bé Ngôi Sao
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem hình ngôi sao màu hồng nhạt, trang trí kem trắng dễ thương.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫750,000
+                            </span>
+                            <button aria-label="Thêm Bánh Tiệc Bé Ngôi Sao vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh sinh nhật 3 tầng trang trí hoa hồng màu hồng và kem bông trắng"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://tse2.mm.bing.net/th?id=OIP.WFDPb2OS4KoGK81yDZDDRwHaIs&pid=Api&P=0&h=180"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Sinh Nhật 3 Tầng
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem 3 tầng sang trọng với hoa hồng tươi và kem bông mềm mịn.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫1,200,000
+                            </span>
+                            <button aria-label="Thêm Bánh Sinh Nhật 3 Tầng vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh Valentine hình trái tim đỏ với kem trắng trang trí socola"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://birthdaylovecake.com/wp-content/uploads/2022/02/2.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Valentine Trái Tim
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem hình trái tim đỏ, trang trí socola và kem tươi thơm ngon.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫850,000
+                            </span>
+                            <button aria-label="Thêm Bánh Valentine Trái Tim vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh tiệc bé hình gấu bông màu hồng và kem trang trí ngộ nghĩnh"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://tse4.mm.bing.net/th?id=OIP.aBAGJKrqnfzzRmysPF9kxQHaHa&pid=Api&P=0&h=180"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Tiệc Bé Gấu Bông
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem ngộ nghĩnh hình gấu bông, màu hồng pastel dễ thương.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫700,000
+                            </span>
+                            <button aria-label="Thêm Bánh Tiệc Bé Gấu Bông vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh sự kiện hình tròn trang trí hoa tươi và kem màu hồng nhạt"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://banhsinhnhat.com/media/cache/c6/ea/c6ea5e384f9ed2b2284fd47d0e5d16ab.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Sự Kiện Hoa Tươi
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem sang trọng với hoa tươi và kem hồng nhạt, phù hợp sự kiện.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫1,500,000
+                            </span>
+                            <button aria-label="Thêm Bánh Sự Kiện Hoa Tươi vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh sinh nhật hình thú ngộ nghĩnh màu hồng pastel và kem trắng"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://friendshipcakes.com/wp-content/uploads/2023/04/banh-ve-hinh-7.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Sinh Nhật Hình Thú
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem hình thú ngộ nghĩnh, màu hồng pastel, thích hợp cho bé.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫900,000
+                            </span>
+                            <button aria-label="Thêm Bánh Sinh Nhật Hình Thú vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh Valentine hình hoa hồng đỏ và kem hồng đậm trang trí tinh tế"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://banhkemngonghinh.com/wp-content/uploads/2018/04/26-banh-kem-sinh-nhat-tang-ngay-8.3-trai-tim.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Valentine Hoa Hồng
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem hình hoa hồng đỏ, kem hồng đậm, ngọt ngào và lãng mạn.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫1,000,000
+                            </span>
+                            <button aria-label="Thêm Bánh Valentine Hoa Hồng vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
+                    <img alt="Bánh tiệc bé hình ngôi sao màu hồng nhạt và kem trắng trang trí dễ thương"
+                        class="w-full h-48 object-cover" height="300"
+                        src="https://friendshipcakes.com/wp-content/uploads/2023/04/banh-ve-hinh-0-e1681523771366.jpg"
+                        width="400" />
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold text-pink-700 mb-2">
+                            Bánh Tiệc Bé Ngôi Sao
+                        </h3>
+                        <p class="text-pink-500 mb-3">
+                            Bánh kem hình ngôi sao màu hồng nhạt, trang trí kem trắng dễ thương.
+                        </p>
+                        <div class="flex items-center justify-between text-pink-600 font-semibold">
+                            <span>
+                                ₫750,000
+                            </span>
+                            <button aria-label="Thêm Bánh Tiệc Bé Ngôi Sao vào giỏ hàng"
+                                class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
+                                <i class="fas fa-cart-plus mr-1">
+                                </i>
+                                Mua
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+     
+    </main>
+    <footer class="bg-pink-300 text-pink-100 py-6 mt-12">
+        <div class="container mx-auto px-4 text-center text-sm">
+            © 2024 Bánh Kem Ngọt Ngào. All rights reserved.
+        </div>
+    </footer>
+
+</body>
