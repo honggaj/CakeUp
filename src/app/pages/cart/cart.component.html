@@ -1,242 +1,283 @@
+<body class="bg-pink-50 min-h-screen flex flex-col">
+    <!-- Header -->
 
- <body class="bg-pink-50 min-h-screen flex flex-col">
-  <!-- Header -->
- 
-  <!-- Main Content -->
-  <main class="flex-grow container mx-auto px-4 py-8">
-   <h2 class="text-4xl font-bold text-pink-600 mb-8 text-center select-none">
-    Giỏ Hàng Của Bạn
-   </h2>
-   <div class="overflow-x-auto shadow-lg rounded-lg">
-    <table class="min-w-full bg-white rounded-lg">
-     <thead class="bg-pink-200 text-pink-800 font-semibold text-left">
-      <tr>
-       <th class="py-3 px-4 w-32">
-        Sản Phẩm
-       </th>
-       <th class="py-3 px-4">
-        Tên Bánh
-       </th>
-       <th class="py-3 px-4 w-32 text-center">
-        Số Lượng
-       </th>
-       <th class="py-3 px-4 w-40 text-right">
-        Đơn Giá
-       </th>
-       <th class="py-3 px-4 w-40 text-right">
-        Thành Tiền
-       </th>
-       <th class="py-3 px-4 w-24 text-center">
-        Xóa
-       </th>
-      </tr>
-     </thead>
-     <tbody class="divide-y divide-pink-100">
-      <tr class="hover:bg-pink-50 transition">
-       <td class="py-4 px-4">
-        <img alt="Bánh kem 3 tầng màu hồng pastel trang trí hoa tươi và socola trắng" class="rounded-lg object-cover w-20 h-20 mx-auto" height="80" src="https://storage.googleapis.com/a1aa/image/22b2eec3-3d18-458a-97dc-373f141256b3.jpg" width="80"/>
-       </td>
-       <td class="py-4 px-4 font-semibold text-pink-700">
-        Bánh Kem Hồng 3 Tầng
-       </td>
-       <td class="py-4 px-4 text-center">
-        <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
-         <button aria-label="Giảm số lượng bánh kem hồng 3 tầng" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-minus">
-          </i>
-         </button>
-         <input aria-label="Số lượng bánh kem hồng 3 tầng" class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1" type="number" value="2"/>
-         <button aria-label="Tăng số lượng bánh kem hồng 3 tầng" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-plus">
-          </i>
-         </button>
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <h2 class="text-4xl font-bold text-pink-600 mb-8 text-center select-none">
+            Giỏ Hàng Của Bạn
+        </h2>
+        <div class="overflow-x-auto shadow-lg rounded-lg">
+            <table class="min-w-full bg-white rounded-lg">
+                <thead class="bg-pink-200 text-pink-800 font-semibold text-left">
+                    <tr>
+                        <th class="py-3 px-4 w-32">
+                            Sản Phẩm
+                        </th>
+                        <th class="py-3 px-4">
+                            Tên Bánh
+                        </th>
+                        <th class="py-3 px-4 w-32 text-center">
+                            Số Lượng
+                        </th>
+                        <th class="py-3 px-4 w-40 text-right">
+                            Đơn Giá
+                        </th>
+                        <th class="py-3 px-4 w-40 text-right">
+                            Thành Tiền
+                        </th>
+                        <th class="py-3 px-4 w-24 text-center">
+                            Xóa
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-pink-100">
+                    <tr class="hover:bg-pink-50 transition">
+                        <td class="py-4 px-4">
+                            <img alt="Bánh kem 3 tầng màu hồng pastel trang trí hoa tươi và socola trắng"
+                                class="rounded-lg object-cover w-20 h-20 mx-auto" height="80"
+                                src="https://scr.vn/wp-content/uploads/2020/10/Chiec-banh-sinh-nhat-cuc-ky-dep-tang-cho-me-1024x1018.jpg"
+                                width="80" />
+                        </td>
+                        <td class="py-4 px-4 font-semibold text-pink-700">
+                            Bánh Kem Hồng 3 Tầng
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
+                                <button aria-label="Giảm số lượng bánh kem hồng 3 tầng"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-minus">
+                                    </i>
+                                </button>
+                                <input aria-label="Số lượng bánh kem hồng 3 tầng"
+                                    class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1"
+                                    type="number" value="2" />
+                                <button aria-label="Tăng số lượng bánh kem hồng 3 tầng"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-plus">
+                                    </i>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫450,000
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫900,000
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <button aria-label="Xóa bánh kem hồng 3 tầng khỏi giỏ hàng"
+                                class="text-pink-600 hover:text-pink-800 transition">
+                                <i class="fas fa-trash-alt fa-lg">
+                                </i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-pink-50 transition">
+                        <td class="py-4 px-4">
+                            <img alt="Bánh kem socola phủ kem hồng pastel trang trí socola và dâu tây tươi"
+                                class="rounded-lg object-cover w-20 h-20 mx-auto" height="80"
+                                src="https://tse3.mm.bing.net/th?id=OIP.FO3eQkiDY6o1qwqE-QKuoAHaH0&pid=Api&P=0&h=180"
+                                width="80" />
+                        </td>
+                        <td class="py-4 px-4 font-semibold text-pink-700">
+                            Bánh Kem Socola Hồng
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
+                                <button aria-label="Giảm số lượng bánh kem socola hồng"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-minus">
+                                    </i>
+                                </button>
+                                <input aria-label="Số lượng bánh kem socola hồng"
+                                    class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1"
+                                    type="number" value="1" />
+                                <button aria-label="Tăng số lượng bánh kem socola hồng"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-plus">
+                                    </i>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫350,000
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫350,000
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <button aria-label="Xóa bánh kem socola hồng khỏi giỏ hàng"
+                                class="text-pink-600 hover:text-pink-800 transition">
+                                <i class="fas fa-trash-alt fa-lg">
+                                </i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-pink-50 transition">
+                        <td class="py-4 px-4">
+                            <img alt="Bánh kem trái cây tươi nhiều màu sắc với kem hồng pastel trang trí trái cây tươi"
+                                class="rounded-lg object-cover w-20 h-20 mx-auto" height="80"
+                                src="https://duhocsunny.edu.vn/wp-content/uploads/2023/03/banh-kem-hoa-la.jpg"
+                                width="80" />
+                        </td>
+                        <td class="py-4 px-4 font-semibold text-pink-700">
+                            Bánh Kem Trái Cây
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
+                                <button aria-label="Giảm số lượng bánh kem trái cây"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-minus">
+                                    </i>
+                                </button>
+                                <input aria-label="Số lượng bánh kem trái cây"
+                                    class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1"
+                                    type="number" value="3" />
+                                <button aria-label="Tăng số lượng bánh kem trái cây"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-plus">
+                                    </i>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫400,000
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫1,200,000
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <button aria-label="Xóa bánh kem trái cây khỏi giỏ hàng"
+                                class="text-pink-600 hover:text-pink-800 transition">
+                                <i class="fas fa-trash-alt fa-lg">
+                                </i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-pink-50 transition">
+                        <td class="py-4 px-4">
+                            <img alt="Bánh kem matcha màu xanh pastel trang trí kem hồng và hoa tươi"
+                                class="rounded-lg object-cover w-20 h-20 mx-auto" height="80"
+                                src="https://nguyensonbakery.vn/wp-content/uploads/2022/06/cach-lam-banh-kem-matcha-8.jpg"
+                                width="80" />
+                        </td>
+                        <td class="py-4 px-4 font-semibold text-pink-700">
+                            Bánh Kem Matcha
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
+                                <button aria-label="Giảm số lượng bánh kem matcha"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-minus">
+                                    </i>
+                                </button>
+                                <input aria-label="Số lượng bánh kem matcha"
+                                    class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1"
+                                    type="number" value="1" />
+                                <button aria-label="Tăng số lượng bánh kem matcha"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-plus">
+                                    </i>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫380,000
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫380,000
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <button aria-label="Xóa bánh kem matcha khỏi giỏ hàng"
+                                class="text-pink-600 hover:text-pink-800 transition">
+                                <i class="fas fa-trash-alt fa-lg">
+                                </i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-pink-50 transition">
+                        <td class="py-4 px-4">
+                            <img alt="Bánh kem phô mai phủ kem hồng pastel trang trí hoa quả tươi"
+                                class="rounded-lg object-cover w-20 h-20 mx-auto" height="80"
+                                src="https://digifood.vn/blog/wp-content/uploads/2022/05/banh-kem-pho-mai-1-Anh-@beanjamvn.jpg"
+                                width="80" />
+                        </td>
+                        <td class="py-4 px-4 font-semibold text-pink-700">
+                            Bánh Kem Phô Mai
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
+                                <button aria-label="Giảm số lượng bánh kem phô mai"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-minus">
+                                    </i>
+                                </button>
+                                <input aria-label="Số lượng bánh kem phô mai"
+                                    class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1"
+                                    type="number" value="4" />
+                                <button aria-label="Tăng số lượng bánh kem phô mai"
+                                    class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
+                                    <i class="fas fa-plus">
+                                    </i>
+                                </button>
+                            </div>
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫420,000
+                        </td>
+                        <td class="py-4 px-4 text-right font-semibold text-pink-700">
+                            ₫1,680,000
+                        </td>
+                        <td class="py-4 px-4 text-center">
+                            <button aria-label="Xóa bánh kem phô mai khỏi giỏ hàng"
+                                class="text-pink-600 hover:text-pink-800 transition">
+                                <i class="fas fa-trash-alt fa-lg">
+                                </i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫450,000
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫900,000
-       </td>
-       <td class="py-4 px-4 text-center">
-        <button aria-label="Xóa bánh kem hồng 3 tầng khỏi giỏ hàng" class="text-pink-600 hover:text-pink-800 transition">
-         <i class="fas fa-trash-alt fa-lg">
-         </i>
-        </button>
-       </td>
-      </tr>
-      <tr class="hover:bg-pink-50 transition">
-       <td class="py-4 px-4">
-        <img alt="Bánh kem socola phủ kem hồng pastel trang trí socola và dâu tây tươi" class="rounded-lg object-cover w-20 h-20 mx-auto" height="80" src="https://storage.googleapis.com/a1aa/image/6830963e-efba-4b86-3709-c5f16a012520.jpg" width="80"/>
-       </td>
-       <td class="py-4 px-4 font-semibold text-pink-700">
-        Bánh Kem Socola Hồng
-       </td>
-       <td class="py-4 px-4 text-center">
-        <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
-         <button aria-label="Giảm số lượng bánh kem socola hồng" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-minus">
-          </i>
-         </button>
-         <input aria-label="Số lượng bánh kem socola hồng" class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1" type="number" value="1"/>
-         <button aria-label="Tăng số lượng bánh kem socola hồng" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-plus">
-          </i>
-         </button>
+        <div
+            class="mt-8 max-w-md mx-auto bg-pink-100 rounded-lg p-6 shadow-lg text-pink-800 font-semibold text-lg select-none">
+            <div class="flex justify-between mb-3">
+                <span>
+                    Tổng tiền hàng:
+                </span>
+                <span>
+                    ₫4,510,000
+                </span>
+            </div>
+            <div class="flex justify-between mb-3">
+                <span>
+                    Phí vận chuyển:
+                </span>
+                <span>
+                    ₫50,000
+                </span>
+            </div>
+            <div class="border-t border-pink-300 pt-3 flex justify-between text-2xl font-bold">
+                <span>
+                    Tổng thanh toán:
+                </span>
+                <span>
+                    ₫4,560,000
+                </span>
+            </div>
         </div>
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫350,000
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫350,000
-       </td>
-       <td class="py-4 px-4 text-center">
-        <button aria-label="Xóa bánh kem socola hồng khỏi giỏ hàng" class="text-pink-600 hover:text-pink-800 transition">
-         <i class="fas fa-trash-alt fa-lg">
-         </i>
-        </button>
-       </td>
-      </tr>
-      <tr class="hover:bg-pink-50 transition">
-       <td class="py-4 px-4">
-        <img alt="Bánh kem trái cây tươi nhiều màu sắc với kem hồng pastel trang trí trái cây tươi" class="rounded-lg object-cover w-20 h-20 mx-auto" height="80" src="https://storage.googleapis.com/a1aa/image/77a4c442-5f4c-4dc5-a2fe-0097c5487a2e.jpg" width="80"/>
-       </td>
-       <td class="py-4 px-4 font-semibold text-pink-700">
-        Bánh Kem Trái Cây
-       </td>
-       <td class="py-4 px-4 text-center">
-        <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
-         <button aria-label="Giảm số lượng bánh kem trái cây" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-minus">
-          </i>
-         </button>
-         <input aria-label="Số lượng bánh kem trái cây" class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1" type="number" value="3"/>
-         <button aria-label="Tăng số lượng bánh kem trái cây" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-plus">
-          </i>
-         </button>
+        <div class="mt-10 flex justify-center">
+            <button aria-label="Thanh toán giỏ hàng"
+                class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-10 rounded-full shadow-lg flex items-center space-x-3 transition select-none">
+                <i class="fas fa-credit-card fa-lg">
+                </i>
+                <span>
+                    Thanh Toán Ngay
+                </span>
+            </button>
         </div>
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫400,000
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫1,200,000
-       </td>
-       <td class="py-4 px-4 text-center">
-        <button aria-label="Xóa bánh kem trái cây khỏi giỏ hàng" class="text-pink-600 hover:text-pink-800 transition">
-         <i class="fas fa-trash-alt fa-lg">
-         </i>
-        </button>
-       </td>
-      </tr>
-      <tr class="hover:bg-pink-50 transition">
-       <td class="py-4 px-4">
-        <img alt="Bánh kem matcha màu xanh pastel trang trí kem hồng và hoa tươi" class="rounded-lg object-cover w-20 h-20 mx-auto" height="80" src="https://storage.googleapis.com/a1aa/image/6477dd0d-cc6d-4625-9572-ce25df52e0e4.jpg" width="80"/>
-       </td>
-       <td class="py-4 px-4 font-semibold text-pink-700">
-        Bánh Kem Matcha
-       </td>
-       <td class="py-4 px-4 text-center">
-        <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
-         <button aria-label="Giảm số lượng bánh kem matcha" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-minus">
-          </i>
-         </button>
-         <input aria-label="Số lượng bánh kem matcha" class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1" type="number" value="1"/>
-         <button aria-label="Tăng số lượng bánh kem matcha" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-plus">
-          </i>
-         </button>
-        </div>
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫380,000
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫380,000
-       </td>
-       <td class="py-4 px-4 text-center">
-        <button aria-label="Xóa bánh kem matcha khỏi giỏ hàng" class="text-pink-600 hover:text-pink-800 transition">
-         <i class="fas fa-trash-alt fa-lg">
-         </i>
-        </button>
-       </td>
-      </tr>
-      <tr class="hover:bg-pink-50 transition">
-       <td class="py-4 px-4">
-        <img alt="Bánh kem phô mai phủ kem hồng pastel trang trí hoa quả tươi" class="rounded-lg object-cover w-20 h-20 mx-auto" height="80" src="https://storage.googleapis.com/a1aa/image/c37de508-25a8-4f1e-e1f4-0bb65d58c930.jpg" width="80"/>
-       </td>
-       <td class="py-4 px-4 font-semibold text-pink-700">
-        Bánh Kem Phô Mai
-       </td>
-       <td class="py-4 px-4 text-center">
-        <div class="inline-flex items-center border border-pink-300 rounded-md overflow-hidden">
-         <button aria-label="Giảm số lượng bánh kem phô mai" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-minus">
-          </i>
-         </button>
-         <input aria-label="Số lượng bánh kem phô mai" class="w-12 text-center border-none focus:ring-0 focus:outline-none" min="1" type="number" value="4"/>
-         <button aria-label="Tăng số lượng bánh kem phô mai" class="px-3 py-1 bg-pink-100 text-pink-600 hover:bg-pink-200 transition">
-          <i class="fas fa-plus">
-          </i>
-         </button>
-        </div>
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫420,000
-       </td>
-       <td class="py-4 px-4 text-right font-semibold text-pink-700">
-        ₫1,680,000
-       </td>
-       <td class="py-4 px-4 text-center">
-        <button aria-label="Xóa bánh kem phô mai khỏi giỏ hàng" class="text-pink-600 hover:text-pink-800 transition">
-         <i class="fas fa-trash-alt fa-lg">
-         </i>
-        </button>
-       </td>
-      </tr>
-     </tbody>
-    </table>
-   </div>
-   <div class="mt-8 max-w-md mx-auto bg-pink-100 rounded-lg p-6 shadow-lg text-pink-800 font-semibold text-lg select-none">
-    <div class="flex justify-between mb-3">
-     <span>
-      Tổng tiền hàng:
-     </span>
-     <span>
-      ₫4,510,000
-     </span>
-    </div>
-    <div class="flex justify-between mb-3">
-     <span>
-      Phí vận chuyển:
-     </span>
-     <span>
-      ₫50,000
-     </span>
-    </div>
-    <div class="border-t border-pink-300 pt-3 flex justify-between text-2xl font-bold">
-     <span>
-      Tổng thanh toán:
-     </span>
-     <span>
-      ₫4,560,000
-     </span>
-    </div>
-   </div>
-   <div class="mt-10 flex justify-center">
-    <button aria-label="Thanh toán giỏ hàng" class="bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-10 rounded-full shadow-lg flex items-center space-x-3 transition select-none">
-     <i class="fas fa-credit-card fa-lg">
-     </i>
-     <span>
-      Thanh Toán Ngay
-     </span>
-    </button>
-   </div>
-  </main>
-  <!-- Footer -->
-  
- 
- </body>
+    </main>
+    <!-- Footer -->
+
+
+</body>
