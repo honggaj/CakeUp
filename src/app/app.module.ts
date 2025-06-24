@@ -18,6 +18,8 @@ import { CustomCakeComponent } from './pages/custom-cake/custom-cake.component';
 import { ComboDealsComponent } from './pages/combo-deals/combo-deals.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
 import { TrackOrderComponent } from './pages/track-order/track-order.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { TrackOrderComponent } from './pages/track-order/track-order.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

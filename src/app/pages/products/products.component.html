@@ -1,64 +1,31 @@
-<body class="bg-pink-50 min-h-screen flex flex-col">
 
-    <main class="flex-grow container mx-auto px-4 py-10">
-        <section class="mb-16" id="categories">
-            <h2 class="text-3xl font-bold text-pink-700 mb-8 text-center">
-                Thể Loại Bánh Kem
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-                <div
-                    class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-pink-700 hover:shadow-lg transition">
-                    <i class="fas fa-birthday-cake fa-4x mb-4">
-                    </i>
-                    <h3 class="text-xl font-semibold mb-2">
-                        Bánh Sinh Nhật
-                    </h3>
-                    <p class="text-center text-pink-500">
-                        Bánh kem trang trí đẹp mắt, phù hợp cho các dịp sinh nhật.
-                    </p>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-pink-700 hover:shadow-lg transition">
-                    <i class="fas fa-heart fa-4x mb-4">
-                    </i>
-                    <h3 class="text-xl font-semibold mb-2">
-                        Bánh Valentine
-                    </h3>
-                    <p class="text-center text-pink-500">
-                        Bánh kem ngọt ngào, lãng mạn dành tặng người thương.
-                    </p>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-pink-700 hover:shadow-lg transition">
-                    <i class="fas fa-baby fa-4x mb-4">
-                    </i>
-                    <h3 class="text-xl font-semibold mb-2">
-                        Bánh Tiệc Bé
-                    </h3>
-                    <p class="text-center text-pink-500">
-                        Bánh kem dễ thương, phù hợp cho tiệc thôi nôi và sinh nhật bé.
-                    </p>
-                </div>
-                <div
-                    class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-pink-700 hover:shadow-lg transition">
-                    <i class="fas fa-briefcase fa-4x mb-4">
-                    </i>
-                    <h3 class="text-xl font-semibold mb-2">
-                        Bánh Sự Kiện
-                    </h3>
-                    <p class="text-center text-pink-500">
-                        Bánh kem sang trọng, thích hợp cho các sự kiện, hội nghị.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section class="mb-16" id="products">
-            <h2 class="text-3xl font-bold text-pink-700 mb-8 text-center">
-                Sản Phẩm Bánh Kem
-            </h2>
-            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                <article routerLink="/product-detail"
+<main class="container mx-auto px-4 py-10">
+  <div class="flex gap-6">
+    <!-- Sidebar thể loại bên trái -->
+    <aside class="w-1/4 hidden md:block">
+      <h2 class="text-2xl font-bold text-pink-700 mb-6">Thể Loại</h2>
+      <div class="space-y-4">
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-md cursor-pointer">
+          🎂 Bánh Sinh Nhật
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-md cursor-pointer">
+          💘 Bánh Valentine
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-md cursor-pointer">
+          👶 Bánh Tiệc Bé
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow hover:shadow-md cursor-pointer">
+          🧳 Bánh Sự Kiện
+        </div>
+      </div>
+    </aside>
+
+    <!-- Danh sách sản phẩm bên phải -->
+    <section class="flex-1" id="products">
+      <h2 class="text-3xl font-bold text-pink-700 mb-8 text-center">Sản Phẩm Của CakeUp</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <article routerLink="/product-detail"
                     class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition">
                     <img alt="Bánh Valentine hình trái tim đỏ với kem trắng trang trí socola"
                         class="w-full h-48 object-cover" height="300"
@@ -73,7 +40,7 @@
                         <div
                             class="flex items-center justify-between text-pink-600 font-semibold gap-2 flex-wrap sm:flex-nowrap">
                             <span>
-                                ₫850,000
+                                850,000 VNĐ
                             </span>
                             <button aria-label="Thêm Bánh Valentine Trái Tim vào giỏ hàng"
                                 class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
@@ -99,7 +66,7 @@
                         <div
                             class="flex items-center justify-between text-pink-600 font-semibold gap-2 flex-wrap sm:flex-nowrap">
                             <span>
-                                ₫700,000
+                                700,000 VNĐ
                             </span>
                             <button aria-label="Thêm Bánh Tiệc Bé Gấu Bông vào giỏ hàng"
                                 class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
@@ -125,7 +92,7 @@
                         <div
                             class="flex items-center justify-between text-pink-600 font-semibold gap-2 flex-wrap sm:flex-nowrap">
                             <span>
-                                ₫1,500,000
+                                1,500,000 VNĐ
                             </span>
                             <button aria-label="Thêm Bánh Sự Kiện Hoa Tươi vào giỏ hàng"
                                 class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
@@ -150,7 +117,7 @@
                         <div
                             class="flex items-center justify-between text-pink-600 font-semibold gap-2 flex-wrap sm:flex-nowrap">
                             <span>
-                                ₫900,000
+                                900,000 VNĐ
                             </span>
                             <button aria-label="Thêm Bánh Sinh Nhật Hình Thú vào giỏ hàng"
                                 class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
@@ -176,7 +143,7 @@
                         <div
                             class="flex items-center justify-between text-pink-600 font-semibold gap-2 flex-wrap sm:flex-nowrap">
                             <span>
-                                ₫1,000,000
+                                1,000,000 VNĐ
                             </span>
                             <button aria-label="Thêm Bánh Valentine Hoa Hồng vào giỏ hàng"
                                 class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
@@ -202,7 +169,7 @@
                         <div
                             class="flex items-center justify-between text-pink-600 font-semibold gap-2 flex-wrap sm:flex-nowrap">
                             <span>
-                                ₫750,000
+                                750,000 VNĐ
                             </span>
                             <button aria-label="Thêm Bánh Tiệc Bé Ngôi Sao vào giỏ hàng"
                                 class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
@@ -228,7 +195,7 @@
                         <div
                             class="flex items-center justify-between text-pink-600 font-semibold gap-2 flex-wrap sm:flex-nowrap">
                             <span>
-                                ₫1,200,000
+                                1,200,000 VNĐ
                             </span>
                             <button aria-label="Thêm Bánh Sinh Nhật 3 Tầng vào giỏ hàng"
                                 class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md transition">
@@ -239,11 +206,7 @@
                         </div>
                     </div>
                 </article>
-
-            </div>
-        </section>
-
-    </main>
-
-
-</body>
+      </div>
+    </section>
+  </div>
+</main>
