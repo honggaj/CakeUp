@@ -11,6 +11,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { UserOrdersComponent } from './pages/user-orders/user-orders.component';
+import { ComboDealsComponent } from './pages/combo-deals/combo-deals.component';
+import { CustomCakeComponent } from './pages/custom-cake/custom-cake.component';
+import { ReviewsComponent } from './pages/reviews/reviews.component';
+import { TrackOrderComponent } from './pages/track-order/track-order.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -21,6 +25,10 @@ const routes: Routes = [
   { path: 'order-success', component: OrderSuccessComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
+{ path: 'custom-cake', component: CustomCakeComponent },
+{ path: 'combo-deals', component: ComboDealsComponent },
+{ path: 'reviews', component: ReviewsComponent },
+{ path: 'track-order', component: TrackOrderComponent },
 
   // nếu có đăng nhập:
   { path: 'login', component: LoginComponent },

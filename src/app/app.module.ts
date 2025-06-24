@@ -14,6 +14,10 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { UserOrdersComponent } from './pages/user-orders/user-orders.component';
+import { CustomCakeComponent } from './pages/custom-cake/custom-cake.component';
+import { ComboDealsComponent } from './pages/combo-deals/combo-deals.component';
+import { ReviewsComponent } from './pages/reviews/reviews.component';
+import { TrackOrderComponent } from './pages/track-order/track-order.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { UserOrdersComponent } from './pages/user-orders/user-orders.component';
     ContactComponent,
     LoginComponent,
     RegisterComponent,
-    UserOrdersComponent
+    UserOrdersComponent,
+    CustomCakeComponent,
+    ComboDealsComponent,
+    ReviewsComponent,
+    TrackOrderComponent
   ],
   imports: [
     BrowserModule,
