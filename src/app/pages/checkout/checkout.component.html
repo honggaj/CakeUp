@@ -1,57 +1,45 @@
 <body class="bg-pink-50 min-h-screen flex flex-col">
   <main class="flex-grow container mx-auto px-4 py-10">
+
+    <!-- LOGO -->
+    <div class="flex justify-center mb-4 select-none">
+      <img src="https://i.pinimg.com/736x/e6/42/42/e64242a295dbcd64b7f5272398aab5ba.jpg" 
+           alt="Logo" 
+           class="w-24 h-24 rounded-full shadow-md object-cover">
+    </div>
+
+    <!-- Tiêu đề -->
     <h2 class="text-4xl font-bold text-pink-600 mb-8 text-center select-none">
       Xác Nhận Thanh Toán
     </h2>
 
-<!-- Thông tin người đặt -->
-<div class="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-xl mx-auto text-pink-800">
-  <h3 class="text-xl font-semibold mb-4">Thông Tin Giao Hàng</h3>
-  <p><span class="font-semibold">Họ tên:</span> Nguyễn Văn A</p>
-  <p><span class="font-semibold">Số điện thoại:</span> 0909 123 456</p>
-  <p><span class="font-semibold">Địa chỉ:</span> 123 Đường Hoa Hồng, Quận 1, TP.HCM</p>
-  <p><span class="font-semibold">Ngày giao hàng:</span> 2025-06-25</p>
-  <p><span class="font-semibold">Giờ giao hàng:</span> 15:00</p>
-</div>
+    <!-- Gộp 2 phần thành grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-8">
+      <!-- Thông tin người đặt -->
+      <div class="bg-white rounded-lg shadow-lg p-6 text-pink-800">
+        <h3 class="text-xl font-semibold mb-4">Thông Tin Giao Hàng</h3>
+        <p><span class="font-semibold">Họ tên:</span> Nguyễn Văn A</p>
+        <p><span class="font-semibold">Số điện thoại:</span> 0909 123 456</p>
+        <p><span class="font-semibold">Địa chỉ:</span> 123 Đường Hoa Hồng, Quận 1, TP.HCM</p>
+        <p><span class="font-semibold">Ngày giao hàng:</span> 2025-06-25</p>
+        <p><span class="font-semibold">Giờ giao hàng:</span> 15:00</p>
+      </div>
 
-    <!-- Tóm tắt đơn hàng -->
-    <div class="bg-white rounded-lg shadow-lg p-6 mb-8 max-w-xl mx-auto text-pink-800">
-      <h3 class="text-xl font-semibold mb-4">Tóm Tắt Đơn Hàng</h3>
-      <ul class="space-y-2">
-        <li class="flex justify-between">
-          <span>Bánh Kem Hồng 3 Tầng (x2)</span>
-          <span>₫900,000</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Bánh Kem Socola Hồng (x1)</span>
-          <span>₫350,000</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Bánh Kem Trái Cây (x3)</span>
-          <span>₫1,200,000</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Bánh Kem Matcha (x1)</span>
-          <span>₫380,000</span>
-        </li>
-        <li class="flex justify-between">
-          <span>Bánh Kem Phô Mai (x4)</span>
-          <span>₫1,680,000</span>
-        </li>
-      </ul>
+      <!-- Tóm tắt đơn hàng -->
+      <div class="bg-white rounded-lg shadow-lg p-6 text-pink-800">
+        <h3 class="text-xl font-semibold mb-4">Tóm Tắt Đơn Hàng</h3>
+        <ul class="space-y-2">
+          <li class="flex justify-between"><span>Bánh Kem Hồng 3 Tầng (x2)</span><span>₫900,000</span></li>
+          <li class="flex justify-between"><span>Bánh Kem Socola Hồng (x1)</span><span>₫350,000</span></li>
+          <li class="flex justify-between"><span>Bánh Kem Trái Cây (x3)</span><span>₫1,200,000</span></li>
+          <li class="flex justify-between"><span>Bánh Kem Matcha (x1)</span><span>₫380,000</span></li>
+          <li class="flex justify-between"><span>Bánh Kem Phô Mai (x4)</span><span>₫1,680,000</span></li>
+        </ul>
 
-      <div class="border-t mt-4 pt-4 space-y-2 font-semibold">
-        <div class="flex justify-between">
-          <span>Tạm tính:</span>
-          <span>₫4,510,000</span>
-        </div>
-        <div class="flex justify-between">
-          <span>Phí vận chuyển:</span>
-          <span>₫50,000</span>
-        </div>
-        <div class="flex justify-between text-xl font-bold text-pink-700">
-          <span>Tổng thanh toán:</span>
-          <span>₫4,560,000</span>
+        <div class="border-t mt-4 pt-4 space-y-2 font-semibold">
+          <div class="flex justify-between"><span>Tạm tính:</span><span>₫4,510,000</span></div>
+          <div class="flex justify-between"><span>Phí vận chuyển:</span><span>₫50,000</span></div>
+          <div class="flex justify-between text-xl font-bold text-pink-700"><span>Tổng thanh toán:</span><span>₫4,560,000</span></div>
         </div>
       </div>
     </div>
