@@ -5,38 +5,61 @@
   <!-- Header -->
   <header class="bg-pink-200 shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-4">
-     <div class="flex items-center justify-between h-16">
-  <!-- Logo -->
-  <a class="flex items-center space-x-2 logo-font text-3xl text-pink-700 font-bold" routerLink="/">
-    <img src="https://i.pinimg.com/736x/e6/42/42/e64242a295dbcd64b7f5272398aab5ba.jpg"
-         alt="CakeUp Logo" class="w-10 h-10 object-cover rounded-full shadow" />
-    <span>CakeUp</span>
-  </a>
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a class="flex items-center space-x-2 logo-font text-3xl text-pink-700 font-bold" routerLink="/">
+          <img src="https://i.pinimg.com/736x/e6/42/42/e64242a295dbcd64b7f5272398aab5ba.jpg" alt="CakeUp Logo"
+            class="w-10 h-10 object-cover rounded-full shadow" />
+          <span>CakeUp</span>
+        </a>
 
 
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex space-x-6">
-          <a routerLink="/" routerLinkActive="text-pink-600"
-            class="text-pink-800 hover:text-pink-600 font-medium transition">Trang chủ</a>
-          <a routerLink="/products" routerLinkActive="text-pink-600"
-            class="text-pink-800 hover:text-pink-600 font-medium transition">Bánh Ngọt</a>
-          <a routerLink="/about" routerLinkActive="text-pink-600"
-            class="text-pink-800 hover:text-pink-600 font-medium transition">Giới thiệu</a>
-          <a routerLink="/contact" routerLinkActive="text-pink-600"
-            class="text-pink-800 hover:text-pink-600 font-medium transition">Liên hệ</a>
-              <a routerLink="/track-order" routerLinkActive="text-pink-600"
-            class="text-pink-800 hover:text-pink-600 font-medium transition">🚚 Tra Cứu Đơn</a>
-          <a routerLink="/cart" routerLinkActive="text-pink-600"
-            class="text-pink-800 hover:text-pink-600 font-medium transition">🛒 Giỏ hàng</a>
-         
-        
-        </nav>
+      <nav class="hidden md:flex items-center space-x-6">
+  <a routerLink="/" routerLinkActive="text-pink-600"
+    class="text-pink-800 hover:text-pink-600 font-medium transition flex items-center">Trang chủ</a>
+
+  <a routerLink="/products" routerLinkActive="text-pink-600"
+    class="text-pink-800 hover:text-pink-600 font-medium transition flex items-center">Bánh Ngọt</a>
+
+  <a routerLink="/about" routerLinkActive="text-pink-600"
+    class="text-pink-800 hover:text-pink-600 font-medium transition flex items-center">Giới thiệu</a>
+
+  <a routerLink="/contact" routerLinkActive="text-pink-600"
+    class="text-pink-800 hover:text-pink-600 font-medium transition flex items-center">Liên hệ</a>
+
+  <a routerLink="/track-order" routerLinkActive="text-pink-600"
+    class="text-pink-800 hover:text-pink-600 font-medium transition flex items-center gap-1">
+    <i class="fas fa-car"></i> Tra Cứu Đơn
+  </a>
+
+  <a routerLink="/cart" routerLinkActive="text-pink-600"
+    class="text-pink-800 hover:text-pink-600 font-medium transition flex items-center gap-1">
+    <i class="fas fa-shopping-cart"></i> Giỏ hàng
+  </a>
+
+  <!-- Dropdown tài khoản -->
+  <div class="relative group">
+    <button
+      class="text-pink-800 hover:text-pink-600 font-medium transition flex items-center gap-1 focus:outline-none">
+      <i class="fas fa-user"></i>
+      <i class="fas fa-caret-down text-xs"></i>
+    </button>
+    <div
+      class="absolute right-0 mt-2 w-40 bg-white border rounded shadow-lg py-2 z-50 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transform scale-95 group-hover:scale-100 transition-all duration-200 pointer-events-none group-hover:pointer-events-auto">
+      <a routerLink="/account"
+        class="block px-4 py-2 text-sm text-pink-800 hover:bg-pink-100 transition">Tài khoản</a>
+      <button (click)="openModal()"
+        class="w-full text-left px-4 py-2 text-sm text-pink-800 hover:bg-pink-100 transition">Đăng nhập</button>
+    </div>
+  </div>
+</nav>
+
 
         <!-- Mobile Menu Button -->
         <button (click)="toggleMenu()" class="md:hidden text-pink-800 p-2">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
@@ -53,6 +76,69 @@
       </div>
     </div>
   </header>
+
+
+
+ <!-- Backdrop -->
+<div class="modal-backdrop fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-[1000]">  <div class="bg-white w-full max-w-md p-6 rounded-xl shadow-xl relative">
+    <!-- Close -->
+    <button (click)="closeModal()" class="absolute top-2 right-2 text-gray-500 hover:text-red-500 text-xl">
+      <i class="fas fa-times"></i>
+    </button>
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-6">
+      <button (click)="switchTab('login')"
+        [ngClass]="activeTab === 'login' ? 'text-pink-600 border-pink-600' : 'text-gray-600 border-transparent'"
+        class="px-4 py-2 font-semibold border-b-2 transition">Đăng nhập</button>
+      <button (click)="switchTab('register')"
+        [ngClass]="activeTab === 'register' ? 'text-pink-600 border-pink-600' : 'text-gray-600 border-transparent'"
+        class="px-4 py-2 font-semibold border-b-2 transition">Đăng ký</button>
+    </div>
+
+    <!-- Login Form -->
+    <form *ngIf="activeTab === 'login'" [formGroup]="loginForm" (ngSubmit)="submitLogin()" class="space-y-4">
+      <div class="flex items-center border rounded px-3 py-2">
+        <i class="fas fa-envelope text-pink-500 mr-2"></i>
+        <input type="email" formControlName="email" placeholder="Email" class="w-full focus:outline-none" />
+      </div>
+      <div class="flex items-center border rounded px-3 py-2">
+        <i class="fas fa-lock text-pink-500 mr-2"></i>
+        <input type="password" formControlName="password" placeholder="Mật khẩu" class="w-full focus:outline-none" />
+      </div>
+      <button type="submit"
+        class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 rounded transition">Đăng nhập</button>
+
+      <div class="text-center mt-4 space-x-4">
+        <i class="fab fa-google text-red-500 cursor-pointer"></i>
+        <i class="fab fa-facebook text-blue-600 cursor-pointer"></i>
+      </div>
+    </form>
+
+    <!-- Register Form -->
+    <form *ngIf="activeTab === 'register'" [formGroup]="registerForm" (ngSubmit)="submitRegister()" class="space-y-4">
+      <div class="flex items-center border rounded px-3 py-2">
+        <i class="fas fa-user text-pink-500 mr-2"></i>
+        <input type="text" formControlName="fullName" placeholder="Họ và tên" class="w-full focus:outline-none" />
+      </div>
+      <div class="flex items-center border rounded px-3 py-2">
+        <i class="fas fa-envelope text-pink-500 mr-2"></i>
+        <input type="email" formControlName="email" placeholder="Email" class="w-full focus:outline-none" />
+      </div>
+      <div class="flex items-center border rounded px-3 py-2">
+        <i class="fas fa-phone text-pink-500 mr-2"></i>
+        <input type="tel" formControlName="phone" placeholder="Số điện thoại" class="w-full focus:outline-none" />
+      </div>
+      <div class="flex items-center border rounded px-3 py-2">
+        <i class="fas fa-lock text-pink-500 mr-2"></i>
+        <input type="password" formControlName="password" placeholder="Mật khẩu" class="w-full focus:outline-none" />
+      </div>
+      <button type="submit"
+        class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 rounded transition">Đăng ký</button>
+    </form>
+  </div>
+</div>
+
 
   <!-- Main content -->
   <main class="flex-grow">

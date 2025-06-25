@@ -19,7 +19,7 @@ import { ComboDealsComponent } from './pages/combo-deals/combo-deals.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
 import { TrackOrderComponent } from './pages/track-order/track-order.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,6 +41,7 @@ import { FormsModule } from '@angular/forms';
     TrackOrderComponent
   ],
   imports: [
+    ReactiveFormsModule,
     BrowserModule,
     AppRoutingModule,
     CommonModule,
