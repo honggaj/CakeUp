@@ -1,0 +1,1269 @@
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>
+        Dashboard Admin - Web Bán Bánh Nhọt
+    </title>
+    <script src="https://cdn.tailwindcss.com">
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Baloo 2', cursive;
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-pink-200 via-yellow-200 to-green-200 min-h-screen flex flex-col">
+    <header class="bg-gradient-to-r from-pink-500 via-yellow-400 to-green-400 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-3">
+                    <img alt="Logo bánh ngọt hình chiếc bánh kem màu hồng tươi sáng" class="w-10 h-10 rounded-full"
+                        height="40"
+                        src="https://storage.googleapis.com/a1aa/image/6339745b-7124-495b-d953-3158b0d7e7a6.jpg"
+                        width="40" />
+                    <h1 class="text-white text-2xl font-extrabold tracking-wide select-none">
+                        CAKE UP - Admin
+                    </h1>
+                </div>
+                <nav class="hidden md:flex space-x-6 text-white font-semibold">
+                    <a class="hover:text-yellow-300 transition-colors duration-300 border-b-4 border-yellow-300 pb-1"
+                        href="/admin/dashboard">
+                        Dashboard
+                    </a>
+                    <a class="hover:text-yellow-300 transition-colors duration-300" href="/admin/products">
+                        Quản lý bánh
+                    </a>
+                    <a class="hover:text-yellow-300 transition-colors duration-300" href="/admin/combos">
+                        Quản lý combo
+                    </a>
+                    <a class="hover:text-yellow-300 transition-colors duration-300" href="/admin/orders">
+                        Quản lý đơn hàng
+                    </a>
+                    <a class="hover:text-yellow-300 transition-colors duration-300" href="/admin/vouchers">
+                        Quản lý mã giảm giá
+                    </a>
+                    <a class="hover:text-yellow-300 transition-colors duration-300" href="/admin/users">
+                        Quản lý người dùng
+                    </a>
+                    <a class="hover:text-yellow-300 transition-colors duration-300" href="/admin/reviews">
+                        Duyệt đánh giá
+                    </a>
+                    <a class="hover:text-yellow-300 transition-colors duration-300" href="/admin/custom-cakes">
+                        Bánh custom
+                    </a>
+                </nav>
+                <div class="md:hidden">
+                    <button aria-label="Mở menu điều hướng"
+                        class="text-white focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                        id="mobile-menu-button">
+                        <i class="fas fa-bars fa-lg">
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <nav class="hidden md:hidden bg-pink-400 text-white px-4 py-3 space-y-2" id="mobile-menu">
+            <a class="block border-b-2 border-yellow-300 pb-1 font-semibold" href="/admin/dashboard">
+                Dashboard
+            </a>
+            <a class="block hover:text-yellow-300 transition-colors duration-300" href="/admin/products">
+                Quản lý bánh
+            </a>
+            <a class="block hover:text-yellow-300 transition-colors duration-300" href="/admin/combos">
+                Quản lý combo
+            </a>
+            <a class="block hover:text-yellow-300 transition-colors duration-300" href="/admin/orders">
+                Quản lý đơn hàng
+            </a>
+            <a class="block hover:text-yellow-300 transition-colors duration-300" href="/admin/vouchers">
+                Quản lý mã giảm giá
+            </a>
+            <a class="block hover:text-yellow-300 transition-colors duration-300" href="/admin/users">
+                Quản lý người dùng
+            </a>
+            <a class="block hover:text-yellow-300 transition-colors duration-300" href="/admin/reviews">
+                Duyệt đánh giá
+            </a>
+            <a class="block hover:text-yellow-300 transition-colors duration-300" href="/admin/custom-cakes">
+                Bánh custom
+            </a>
+        </nav>
+    </header>
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <h2 class="text-3xl font-extrabold text-pink-700 mb-6 select-none">
+            Dashboard Tổng Quan
+        </h2>
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+            <div
+                class="bg-gradient-to-tr from-pink-400 to-yellow-300 rounded-xl shadow-lg p-6 flex items-center space-x-4">
+                <div class="bg-white rounded-full p-3 text-pink-500 shadow-md flex items-center justify-center">
+                    <i class="fas fa-chart-line fa-2x">
+                    </i>
+                </div>
+                <div>
+                    <p class="text-white font-semibold text-lg">
+                        Tổng sản phẩm
+                    </p>
+                    <p class="text-white text-3xl font-bold">
+                        128
+                    </p>
+                </div>
+            </div>
+            <div
+                class="bg-gradient-to-tr from-yellow-400 to-green-400 rounded-xl shadow-lg p-6 flex items-center space-x-4">
+                <div class="bg-white rounded-full p-3 text-yellow-500 shadow-md flex items-center justify-center">
+                    <i class="fas fa-box-open fa-2x">
+                    </i>
+                </div>
+                <div>
+                    <p class="text-white font-semibold text-lg">
+                        Tổng combo
+                    </p>
+                    <p class="text-white text-3xl font-bold">
+                        45
+                    </p>
+                </div>
+            </div>
+            <div
+                class="bg-gradient-to-tr from-green-400 to-pink-400 rounded-xl shadow-lg p-6 flex items-center space-x-4">
+                <div class="bg-white rounded-full p-3 text-green-500 shadow-md flex items-center justify-center">
+                    <i class="fas fa-shopping-cart fa-2x">
+                    </i>
+                </div>
+                <div>
+                    <p class="text-white font-semibold text-lg">
+                        Đơn hàng hôm nay
+                    </p>
+                    <p class="text-white text-3xl font-bold">
+                        76
+                    </p>
+                </div>
+            </div>
+            <div
+                class="bg-gradient-to-tr from-pink-400 via-yellow-400 to-green-400 rounded-xl shadow-lg p-6 flex items-center space-x-4">
+                <div class="bg-white rounded-full p-3 text-pink-600 shadow-md flex items-center justify-center">
+                    <i class="fas fa-users fa-2x">
+                    </i>
+                </div>
+                <div>
+                    <p class="text-white font-semibold text-lg">
+                        Người dùng
+                    </p>
+                    <p class="text-white text-3xl font-bold">
+                        1,234
+                    </p>
+                </div>
+            </div>
+        </section>
+      <section class="mb-10">
+  <h3 class="text-2xl font-bold text-pink-700 mb-4 select-none">
+    Quản lý sản phẩm bánh
+  </h3>
+  <div class="overflow-x-auto rounded-lg shadow-lg">
+    <table class="min-w-full bg-white">
+      <thead class="bg-pink-400 text-white">
+        <tr>
+          <th class="text-left py-3 px-4 font-semibold">ID</th>
+          <th class="text-left py-3 px-4 font-semibold">Tên bánh</th>
+          <th class="text-left py-3 px-4 font-semibold">Ảnh</th>
+          <th class="text-left py-3 px-4 font-semibold">Loại</th>
+          <th class="text-left py-3 px-4 font-semibold">Giá (VNĐ)</th>
+          <th class="text-left py-3 px-4 font-semibold">Tồn kho</th>
+          <th class="text-left py-3 px-4 font-semibold">Hành động</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-700">
+        <tr class="border-b border-pink-200 hover:bg-pink-50 transition-colors duration-200">
+          <td class="py-3 px-4">1</td>
+          <td class="py-3 px-4">Bánh kem socola</td>
+          <td class="py-3 px-4">
+            <img src="https://cdn.pastaxi-manager.onepas.vn/content/uploads/articles/mau-banh-kem-socola-dep-2.jpg" class="w-20 h-16 object-cover rounded" />
+          </td>
+          <td class="py-3 px-4">Bánh kem</td>
+          <td class="py-3 px-4">150,000</td>
+          <td class="py-3 px-4">20</td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+        <tr class="border-b border-pink-200 hover:bg-pink-50 transition-colors duration-200">
+          <td class="py-3 px-4">2</td>
+          <td class="py-3 px-4">Bánh bông lan trứng muối</td>
+          <td class="py-3 px-4">
+            <img src="https://daubepgiadinh.vn/wp-content/uploads/2017/03/bong-lan-trung-muoi-600x400.jpg" class="w-20 h-16 object-cover rounded" />
+          </td>
+          <td class="py-3 px-4">Bánh bông lan</td>
+          <td class="py-3 px-4">120,000</td>
+          <td class="py-3 px-4">35</td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+        <tr class="border-b border-pink-200 hover:bg-pink-50 transition-colors duration-200">
+          <td class="py-3 px-4">3</td>
+          <td class="py-3 px-4">Bánh tart trái cây</td>
+          <td class="py-3 px-4">
+            <img src="https://quangon.vn/resources/2022/03/22/cach-lam-banh-tart-trai-cay-10.jpg" class="w-20 h-16 object-cover rounded" />
+          </td>
+          <td class="py-3 px-4">Bánh tart</td>
+          <td class="py-3 px-4">130,000</td>
+          <td class="py-3 px-4">15</td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+        <tr class="border-b border-pink-200 hover:bg-pink-50 transition-colors duration-200">
+          <td class="py-3 px-4">4</td>
+          <td class="py-3 px-4">Bánh mousse dâu</td>
+          <td class="py-3 px-4">
+            <img src="https://beptruong.edu.vn/wp-content/uploads/2013/06/banh-mousse-dau-tay.jpg" class="w-20 h-16 object-cover rounded" />
+          </td>
+          <td class="py-3 px-4">Bánh mousse</td>
+          <td class="py-3 px-4">140,000</td>
+          <td class="py-3 px-4">10</td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>
+</section>
+
+       <section class="mb-10">
+  <h3 class="text-2xl font-bold text-pink-700 mb-4 select-none">
+    Quản lý combo bánh
+  </h3>
+  <div class="overflow-x-auto rounded-lg shadow-lg">
+    <table class="min-w-full bg-white">
+      <thead class="bg-yellow-400 text-white">
+        <tr>
+          <th class="text-left py-3 px-4 font-semibold">ID</th>
+          <th class="text-left py-3 px-4 font-semibold">Ảnh</th>
+          <th class="text-left py-3 px-4 font-semibold">Tên combo</th>
+          <th class="text-left py-3 px-4 font-semibold">Sản phẩm</th>
+          <th class="text-left py-3 px-4 font-semibold">Giá combo (VNĐ)</th>
+          <th class="text-left py-3 px-4 font-semibold">Hành động</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-700">
+        <tr class="border-b border-yellow-200 hover:bg-yellow-50 transition-colors duration-200">
+          <td class="py-3 px-4">1</td>
+          <td class="py-3 px-4">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.AXFjD0_BM_n-KXtTbV55sgHaGo?pid=Api&P=0&h=180" alt="Combo Socola Ngọt Ngào" class="w-16 h-16 object-cover rounded">
+          </td>
+          <td class="py-3 px-4">Combo Socola Ngọt Ngào</td>
+          <td class="py-3 px-4">Bánh kem socola, Bánh tart trái cây</td>
+          <td class="py-3 px-4">270,000</td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+        <tr class="border-b border-yellow-200 hover:bg-yellow-50 transition-colors duration-200">
+          <td class="py-3 px-4">2</td>
+          <td class="py-3 px-4">
+            <img src="https://channel.mediacdn.vn/2019/1/31/photo-3-1548927748306743932962.jpg" alt="Combo Trà & Bánh Mát Lạnh" class="w-16 h-16 object-cover rounded">
+          </td>
+          <td class="py-3 px-4">Combo Trà &amp; Bánh Mát Lạnh</td>
+          <td class="py-3 px-4">Bánh mousse dâu, Bánh crepe xoài</td>
+          <td class="py-3 px-4">255,000</td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+        <tr class="border-b border-yellow-200 hover:bg-yellow-50 transition-colors duration-200">
+          <td class="py-3 px-4">3</td>
+          <td class="py-3 px-4">
+            <img src="https://file.hstatic.net/200000723779/file/5_caf94c8fa9424b888350062ed2f3e851_grande.jpg" alt="Combo Bánh Ngọt Mùa Hè" class="w-16 h-16 object-cover rounded">
+          </td>
+          <td class="py-3 px-4">Combo Bánh Ngọt Mùa Hè</td>
+          <td class="py-3 px-4">Bánh bông lan trứng muối, Bánh crepe xoài</td>
+          <td class="py-3 px-4">230,000</td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+       
+        <tr class="border-b border-yellow-200 hover:bg-yellow-50 transition-colors duration-200">
+          <td class="py-3 px-4">4</td>
+          <td class="py-3 px-4">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.55kmPEAzzxRsFwZJ_O8GSQHaHa?pid=Api&P=0&h=180" alt="Combo Ngọt Ngào Tình Yêu" class="w-16 h-16 object-cover rounded">
+          </td>
+          <td class="py-3 px-4">Combo Ngọt Ngào Tình Yêu</td>
+          <td class="py-3 px-4">Bánh kem socola, Bánh bông lan trứng muối</td>
+          <td class="py-3 px-4">260,000</td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-pink-400 hover:bg-pink-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+        <section class="mb-10">
+            <h3 class="text-2xl font-bold text-pink-700 mb-4 select-none">
+                Quản lý đơn hàng
+            </h3>
+            <div class="overflow-x-auto rounded-lg shadow-lg">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-green-400 text-white">
+                        <tr>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Mã đơn
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Khách hàng
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Sản phẩm
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Tổng tiền (VNĐ)
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Trạng thái
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Hành động
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b border-green-200 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                DH001
+                            </td>
+                            <td class="py-3 px-4">
+                                Nguyễn Văn A
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh kem socola, Bánh tart trái cây
+                            </td>
+                            <td class="py-3 px-4">
+                                270,000
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-yellow-300 text-yellow-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Chờ xử lý
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xử lý
+                                </button>
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Xem
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-green-200 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                DH002
+                            </td>
+                            <td class="py-3 px-4">
+                                Trần Thị B
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh mousse dâu
+                            </td>
+                            <td class="py-3 px-4">
+                                140,000
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-green-300 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Đã giao
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xử lý
+                                </button>
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Xem
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-green-200 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                DH003
+                            </td>
+                            <td class="py-3 px-4">
+                                Lê Văn C
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh crepe xoài, Bánh bông lan trứng muối
+                            </td>
+                            <td class="py-3 px-4">
+                                245,000
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-yellow-300 text-yellow-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Chờ xử lý
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xử lý
+                                </button>
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Xem
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-green-200 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                DH004
+                            </td>
+                            <td class="py-3 px-4">
+                                Phạm Thị D
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh kem socola
+                            </td>
+                            <td class="py-3 px-4">
+                                150,000
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-red-400 text-red-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Đã hủy
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xử lý
+                                </button>
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Xem
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-green-200 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                DH005
+                            </td>
+                            <td class="py-3 px-4">
+                                Hoàng Văn E
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh tart trái cây
+                            </td>
+                            <td class="py-3 px-4">
+                                130,000
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-green-300 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Đã giao
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-500 hover:bg-pink-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xử lý
+                                </button>
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Xem
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mb-10">
+            <h3 class="text-2xl font-bold text-pink-700 mb-4 select-none">
+                Quản lý mã giảm giá
+            </h3>
+            <div class="overflow-x-auto rounded-lg shadow-lg">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-pink-500 text-white">
+                        <tr>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Mã voucher
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Mô tả
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Giảm giá (%)
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Hạn sử dụng
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Hành động
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b border-pink-300 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                BAHNHOT10
+                            </td>
+                            <td class="py-3 px-4">
+                                Giảm 10% cho đơn hàng trên 200,000 VNĐ
+                            </td>
+                            <td class="py-3 px-4">
+                                10
+                            </td>
+                            <td class="py-3 px-4">
+                                31/12/2024
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-pink-300 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                COMBO20
+                            </td>
+                            <td class="py-3 px-4">
+                                Giảm 20% cho combo bánh
+                            </td>
+                            <td class="py-3 px-4">
+                                20
+                            </td>
+                            <td class="py-3 px-4">
+                                30/06/2024
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-pink-300 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                SHIPFREE
+                            </td>
+                            <td class="py-3 px-4">
+                                Miễn phí vận chuyển cho đơn hàng trên 300,000 VNĐ
+                            </td>
+                            <td class="py-3 px-4">
+                                0
+                            </td>
+                            <td class="py-3 px-4">
+                                31/08/2024
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-pink-300 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                NEWYEAR25
+                            </td>
+                            <td class="py-3 px-4">
+                                Giảm 25% nhân dịp năm mới
+                            </td>
+                            <td class="py-3 px-4">
+                                25
+                            </td>
+                            <td class="py-3 px-4">
+                                01/01/2025
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-pink-300 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                SUMMER15
+                            </td>
+                            <td class="py-3 px-4">
+                                Giảm 15% cho mùa hè
+                            </td>
+                            <td class="py-3 px-4">
+                                15
+                            </td>
+                            <td class="py-3 px-4">
+                                30/09/2024
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button
+                                    class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Xóa
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mb-10">
+            <h3 class="text-2xl font-bold text-pink-700 mb-4 select-none">
+                Quản lý người dùng
+            </h3>
+            <div class="overflow-x-auto rounded-lg shadow-lg">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-green-500 text-white">
+                        <tr>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                ID
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Tên người dùng
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Email
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Vai trò
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Trạng thái
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Hành động
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b border-green-300 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                1
+                            </td>
+                            <td class="py-3 px-4">
+                                Nguyễn Văn A
+                            </td>
+                            <td class="py-3 px-4">
+                                nguyenvana&#64;example.com
+                            </td>
+                            <td class="py-3 px-4">
+                                Admin
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-green-300 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Hoạt động
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button
+                                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Khóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-green-300 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                2
+                            </td>
+                            <td class="py-3 px-4">
+                                Trần Thị B
+                            </td>
+                            <td class="py-3 px-4">
+                                tranthib&#64;example.com
+                            </td>
+                            <td class="py-3 px-4">
+                                Nhân viên
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-green-300 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Hoạt động
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button
+                                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Khóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-green-300 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                3
+                            </td>
+                            <td class="py-3 px-4">
+                                Lê Văn C
+                            </td>
+                            <td class="py-3 px-4">
+                                levanc&#64;example.com
+                            </td>
+                            <td class="py-3 px-4">
+                                Nhân viên
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-red-400 text-red-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Khóa
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button
+                                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Khóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-green-300 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                4
+                            </td>
+                            <td class="py-3 px-4">
+                                Phạm Thị D
+                            </td>
+                            <td class="py-3 px-4">
+                                phamthid&#64;example.com
+                            </td>
+                            <td class="py-3 px-4">
+                                Khách hàng
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-green-300 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Hoạt động
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button
+                                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Khóa
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-green-300 hover:bg-green-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                5
+                            </td>
+                            <td class="py-3 px-4">
+                                Hoàng Văn E
+                            </td>
+                            <td class="py-3 px-4">
+                                hoangvane&#64;example.com
+                            </td>
+                            <td class="py-3 px-4">
+                                Khách hàng
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-green-300 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Hoạt động
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-md text-sm">
+                                    Sửa
+                                </button>
+                                <button
+                                    class="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Khóa
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mb-10">
+  <h3 class="text-2xl font-bold text-pink-700 mb-4 select-none">
+    Quản lý chi nhánh cửa hàng
+  </h3>
+  <div class="overflow-x-auto rounded-lg shadow-lg">
+    <table class="min-w-full bg-white">
+      <thead class="bg-pink-300 text-white">
+        <tr>
+          <th class="text-left py-3 px-4 font-semibold">ID</th>
+          <th class="text-left py-3 px-4 font-semibold">Tên chi nhánh</th>
+          <th class="text-left py-3 px-4 font-semibold">Địa chỉ</th>
+          <th class="text-left py-3 px-4 font-semibold">Số điện thoại</th>
+          <th class="text-left py-3 px-4 font-semibold">Trạng thái</th>
+          <th class="text-left py-3 px-4 font-semibold">Hành động</th>
+        </tr>
+      </thead>
+      <tbody class="text-gray-700">
+        <tr class="border-b border-pink-200 hover:bg-pink-50 transition">
+          <td class="py-3 px-4">1</td>
+          <td class="py-3 px-4">Chi nhánh Quận 1</td>
+          <td class="py-3 px-4">123 Nguyễn Trãi, Q1, TP.HCM</td>
+          <td class="py-3 px-4">0909 123 456</td>
+          <td class="py-3 px-4">
+            <span class="px-2 py-1 rounded-full text-white bg-green-500 text-sm">Hoạt động</span>
+          </td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+        <tr class="border-b border-pink-200 hover:bg-pink-50 transition">
+          <td class="py-3 px-4">2</td>
+          <td class="py-3 px-4">Chi nhánh Gò Vấp</td>
+          <td class="py-3 px-4">456 Phan Văn Trị, Q.Gò Vấp, TP.HCM</td>
+          <td class="py-3 px-4">0912 345 678</td>
+          <td class="py-3 px-4">
+            <span class="px-2 py-1 rounded-full text-white bg-green-500 text-sm">Hoạt động</span>
+          </td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+        <tr class="border-b border-pink-200 hover:bg-pink-50 transition">
+          <td class="py-3 px-4">3</td>
+          <td class="py-3 px-4">Chi nhánh Bình Thạnh</td>
+          <td class="py-3 px-4">789 Điện Biên Phủ, Q.Bình Thạnh, TP.HCM</td>
+          <td class="py-3 px-4">0987 654 321</td>
+          <td class="py-3 px-4">
+            <span class="px-2 py-1 rounded-full text-white bg-red-400 text-sm">Tạm ngưng</span>
+          </td>
+          <td class="py-3 px-4 space-x-2">
+            <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-md text-sm">Sửa</button>
+            <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">Xóa</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+        <section class="mb-10">
+            <h3 class="text-2xl font-bold text-pink-700 mb-4 select-none">
+                Duyệt đánh giá
+            </h3>
+            <div class="space-y-6">
+                <article class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img alt="Ảnh đại diện người dùng nữ trẻ tuổi vui vẻ"
+                            class="w-12 h-12 rounded-full object-cover" height="48"
+                            src="https://storage.googleapis.com/a1aa/image/79747868-5706-4753-1ce7-af4cfaf39be9.jpg"
+                            width="48" />
+                        <div>
+                            <p class="font-semibold text-pink-700">
+                                Nguyễn Thị Hồng
+                            </p>
+                            <p class="text-xs text-gray-500">
+                                12/06/2024
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">
+                        Bánh rất ngon, vị ngọt vừa phải, nhân viên phục vụ thân thiện.
+                    </p>
+                    <div class="flex items-center space-x-3 text-yellow-400 mb-3">
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star-half-alt">
+                        </i>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="bg-green-400 hover:bg-green-500 text-white px-4 py-1 rounded-md text-sm">
+                            Hiện
+                        </button>
+                        <button class="bg-red-400 hover:bg-red-500 text-white px-4 py-1 rounded-md text-sm">
+                            Ẩn
+                        </button>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img alt="Ảnh đại diện người dùng nam trung niên vui vẻ"
+                            class="w-12 h-12 rounded-full object-cover" height="48"
+                            src="https://storage.googleapis.com/a1aa/image/47ddea25-0c45-4dbc-98eb-44adc2e0f8a1.jpg"
+                            width="48" />
+                        <div>
+                            <p class="font-semibold text-pink-700">
+                                Trần Văn Nam
+                            </p>
+                            <p class="text-xs text-gray-500">
+                                10/06/2024
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">
+                        Giao hàng nhanh, bánh tươi ngon, sẽ ủng hộ tiếp.
+                    </p>
+                    <div class="flex items-center space-x-3 text-yellow-400 mb-3">
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="far fa-star">
+                        </i>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="bg-green-400 hover:bg-green-500 text-white px-4 py-1 rounded-md text-sm">
+                            Hiện
+                        </button>
+                        <button class="bg-red-400 hover:bg-red-500 text-white px-4 py-1 rounded-md text-sm">
+                            Ẩn
+                        </button>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img alt="Ảnh đại diện người dùng nữ trẻ tuổi cười tươi"
+                            class="w-12 h-12 rounded-full object-cover" height="48"
+                            src="https://storage.googleapis.com/a1aa/image/da3ecb1c-104d-4255-78f0-ab091177987a.jpg"
+                            width="48" />
+                        <div>
+                            <p class="font-semibold text-pink-700">
+                                Lê Thị Mai
+                            </p>
+                            <p class="text-xs text-gray-500">
+                                08/06/2024
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">
+                        Bánh đẹp mắt, hương vị thơm ngon, rất hài lòng.
+                    </p>
+                    <div class="flex items-center space-x-3 text-yellow-400 mb-3">
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star-half-alt">
+                        </i>
+                        <i class="far fa-star">
+                        </i>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="bg-green-400 hover:bg-green-500 text-white px-4 py-1 rounded-md text-sm">
+                            Hiện
+                        </button>
+                        <button class="bg-red-400 hover:bg-red-500 text-white px-4 py-1 rounded-md text-sm">
+                            Ẩn
+                        </button>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img alt="Ảnh đại diện người dùng nam trẻ tuổi tóc xoăn cười tươi"
+                            class="w-12 h-12 rounded-full object-cover" height="48"
+                            src="https://storage.googleapis.com/a1aa/image/294fb037-c7f0-40ec-3999-7d12ab20b4e2.jpg"
+                            width="48" />
+                        <div>
+                            <p class="font-semibold text-pink-700">
+                                Phạm Văn Quang
+                            </p>
+                            <p class="text-xs text-gray-500">
+                                05/06/2024
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">
+                        Bánh ngon, giá hợp lý, sẽ giới thiệu bạn bè.
+                    </p>
+                    <div class="flex items-center space-x-3 text-yellow-400 mb-3">
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="bg-green-400 hover:bg-green-500 text-white px-4 py-1 rounded-md text-sm">
+                            Hiện
+                        </button>
+                        <button class="bg-red-400 hover:bg-red-500 text-white px-4 py-1 rounded-md text-sm">
+                            Ẩn
+                        </button>
+                    </div>
+                </article>
+                <article class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img alt="Ảnh đại diện người dùng nữ lớn tuổi vui vẻ"
+                            class="w-12 h-12 rounded-full object-cover" height="48"
+                            src="https://storage.googleapis.com/a1aa/image/ce228771-da13-4049-e3b5-43d7a345a2b8.jpg"
+                            width="48" />
+                        <div>
+                            <p class="font-semibold text-pink-700">
+                                Trần Thị Hoa
+                            </p>
+                            <p class="text-xs text-gray-500">
+                                01/06/2024
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-3">
+                        Bánh ngon, giao hàng nhanh, rất hài lòng.
+                    </p>
+                    <div class="flex items-center space-x-3 text-yellow-400 mb-3">
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                        <i class="fas fa-star">
+                        </i>
+                    </div>
+                    <div class="space-x-3">
+                        <button class="bg-green-400 hover:bg-green-500 text-white px-4 py-1 rounded-md text-sm">
+                            Hiện
+                        </button>
+                        <button class="bg-red-400 hover:bg-red-500 text-white px-4 py-1 rounded-md text-sm">
+                            Ẩn
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="mb-10">
+            <h3 class="text-2xl font-bold text-pink-700 mb-4 select-none">
+                Bánh custom - Xử lý đơn đặt bánh
+            </h3>
+            <div class="overflow-x-auto rounded-lg shadow-lg">
+                <table class="min-w-full bg-white">
+                    <thead class="bg-pink-600 text-white">
+                        <tr>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Mã đơn
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Khách hàng
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Mô tả yêu cầu
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Ngày đặt
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Trạng thái
+                            </th>
+                            <th class="text-left py-3 px-4 font-semibold">
+                                Hành động
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <tr class="border-b border-pink-400 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                CUST001
+                            </td>
+                            <td class="py-3 px-4">
+                                Nguyễn Văn A
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh kem hình con mèo, màu hồng pastel, trang trí hoa tươi
+                            </td>
+                            <td class="py-3 px-4">
+                                10/06/2024
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-yellow-300 text-yellow-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Chờ xử lý
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xác nhận
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Hủy
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-pink-400 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                CUST002
+                            </td>
+                            <td class="py-3 px-4">
+                                Trần Thị B
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh tart trái cây mix nhiều loại trái cây tươi, trang trí bắt mắt
+                            </td>
+                            <td class="py-3 px-4">
+                                12/06/2024
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-green-300 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Đã xác nhận
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xác nhận
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Hủy
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-pink-400 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                CUST003
+                            </td>
+                            <td class="py-3 px-4">
+                                Lê Văn C
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh mousse dâu tây, trang trí socola và hoa hồng nhỏ
+                            </td>
+                            <td class="py-3 px-4">
+                                15/06/2024
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-yellow-300 text-yellow-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Chờ xử lý
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xác nhận
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Hủy
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-pink-400 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                CUST004
+                            </td>
+                            <td class="py-3 px-4">
+                                Phạm Thị D
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh crepe xoài, trang trí kem tươi và trái cây tươi
+                            </td>
+                            <td class="py-3 px-4">
+                                18/06/2024
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-green-300 text-green-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Đã xác nhận
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xác nhận
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Hủy
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="border-b border-pink-400 hover:bg-pink-50 transition-colors duration-200">
+                            <td class="py-3 px-4">
+                                CUST005
+                            </td>
+                            <td class="py-3 px-4">
+                                Hoàng Văn E
+                            </td>
+                            <td class="py-3 px-4">
+                                Bánh bông lan trứng muối, trang trí kem phô mai và rau câu
+                            </td>
+                            <td class="py-3 px-4">
+                                20/06/2024
+                            </td>
+                            <td class="py-3 px-4">
+                                <span
+                                    class="inline-block bg-yellow-300 text-yellow-900 px-2 py-1 rounded-full text-xs font-semibold">
+                                    Chờ xử lý
+                                </span>
+                            </td>
+                            <td class="py-3 px-4 space-x-2">
+                                <button class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Xác nhận
+                                </button>
+                                <button class="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded-md text-sm">
+                                    Hủy
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-pink-400 text-white text-center py-4 select-none">
+        © 2024 Bánh Nhọt - Dashboard Admin
+    </footer>
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+
+</html>

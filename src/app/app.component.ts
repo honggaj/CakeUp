@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,9 @@ export class AppComponent {
   registerForm: FormGroup;
   showModal = false;
 
-  constructor(private fb: FormBuilder) {
+
+
+  constructor(private fb: FormBuilder,public router: Router) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required]
@@ -56,6 +59,9 @@ export class AppComponent {
     }
   }
 
+  isAdminRoute(): boolean {
+    return this.router.url.startsWith('/admin/dashboard');
+  }
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;

@@ -20,6 +20,7 @@ import { ReviewsComponent } from './pages/reviews/reviews.component';
 import { TrackOrderComponent } from './pages/track-order/track-order.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CustomCakeComponent,
     ComboDealsComponent,
     ReviewsComponent,
-    TrackOrderComponent
+    TrackOrderComponent,
+    DashboardComponent
   ],
   imports: [
     ReactiveFormsModule,

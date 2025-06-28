@@ -15,10 +15,13 @@ import { ComboDealsComponent } from './pages/combo-deals/combo-deals.component';
 import { CustomCakeComponent } from './pages/custom-cake/custom-cake.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
 import { TrackOrderComponent } from './pages/track-order/track-order.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
+    { path: 'dashboard', component: DashboardComponent },
+
   { path: 'product-detail', component: ProductDetailComponent },
   { path: 'cart', component: CartComponent },
   { path: 'checkout', component: CheckoutComponent },
